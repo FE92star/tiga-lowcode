@@ -1,5 +1,5 @@
 {
-  "name": "tiga-low-code",
+  "name": "@tiga/shared",
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
@@ -8,8 +8,5 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "typescript": "^4.7.4"
-  }
+  "license": "ISC"
 }
