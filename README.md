@@ -1,6 +1,14 @@
 # tiga-low-code
 
-> 迪迦低代码平台，布局可以直接参照[稿定设计](https://www.gaoding.com/odyssey/design)的h5页面制作平台
+> 迪迦低代码平台
+
+## 实现参照标准
+
+布局可以直接参照[稿定设计](https://www.gaoding.com/odyssey/design)的h5页面制作平台
+
+## 技术栈
+
+vue3+ts+vite
 
 ## 功能点实现TODO
 
