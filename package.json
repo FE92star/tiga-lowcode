@@ -1,7 +1,7 @@
 {
   "name": "tiga-low-code",
   "version": "0.0.1",
-  "description": "",
+  "description": "low code platform base on vue3",
   "main": "index.js",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
@@ -12,9 +12,13 @@
     "dev": "pnpm -r --parallel --filter=./packages/* run dev",
     "build": "pnpm -r --filter=./packages/* run build"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "low-code",
+    "vue3",
+    "monorepo"
+  ],
+  "author": "FE92star",
+  "license": "MIT",
   "devDependencies": {
     "@commitlint/cli": "^17.0.3",
     "@commitlint/config-conventional": "^17.0.3",
