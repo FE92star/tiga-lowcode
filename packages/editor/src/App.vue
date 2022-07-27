@@ -7,3 +7,12 @@
     <el-button type="danger">Danger</el-button>
   </el-row>
 </template>
+<script lang="ts" setup>
+import { add } from '@tiga/shared'
+import { effect } from 'vue'
+
+effect(() => {
+  console.log(add(1, 2))
+})
+
+</script>
