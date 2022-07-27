@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "preinstall": "npx only-allow pnpm",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "pnpm -r --parallel --filter=./packages/* run dev",
     "build": "pnpm -r --filter=./packages/* run build"
