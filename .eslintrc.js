@@ -3,6 +3,11 @@ const { defineConfig } = require('eslint-define-config')
 
 module.exports = defineConfig({
   root: true,
+  env: {
+    browser: true,
+    node: true,
+    es6: true
+  },
   extends: [
     'eslint:recommended',
     'plugin:vue/vue3-recommended',
@@ -17,6 +22,7 @@ module.exports = defineConfig({
     parser: '@typescript-eslint/parser'
   },
   rules: {
+    // common
     eqeqeq: ['warn', 'always', { null: 'never' }],
     'no-debugger': ['error'],
     'no-empty': ['warn', { allowEmptyCatch: true }],
@@ -29,6 +35,7 @@ module.exports = defineConfig({
       }
     ],
 
+    // typescript
     '@typescript-eslint/ban-ts-comment': 'off',
     '@typescript-eslint/ban-types': 'off',
     '@typescript-eslint/explicit-module-boundary-types': [
@@ -51,6 +58,7 @@ module.exports = defineConfig({
       { prefer: 'type-imports' }
     ],
 
+    // import
     'import/no-duplicates': 'error',
     'import/order': 'error',
     'sort-imports': [
@@ -62,7 +70,11 @@ module.exports = defineConfig({
         memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single'],
         allowSeparatedGroups: false
       }
-    ]
+    ],
+
+    // vue
+    'vue/no-v-html': 'off',
+    'vue/require-default-prop': 'off'
   },
   reportUnusedDisableDirectives: true
 })
