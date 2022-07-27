@@ -12,13 +12,15 @@ vue3+ts+vite
 
 ## 功能点实现TODO
 
+- [x] pnpm monorepo工程搭建
 - [ ] 网格线画布
 - [ ] 组件编辑器(属性、事件、动画)
-- [ ] 定义自定义组件开发、渲染规范
+- [ ] 自定义组件开发、渲染schema规范
 - [ ] 组件拖拽、删除、层级调整、吸附
 - [ ] 编辑状态的撤销、重做
 - [ ] 页面预览、保存功能
 - [ ] psd文件导入与解析
+- [ ] 基于schema规范进行源码生成
 - [ ] 其他有意思的功能模块...
 
 ## pnpm monorepo
@@ -39,8 +41,15 @@ pnpm add [package] -r --filter [scope-package-name]
 ```
 
 3. 工作区包之前的互相链接引用
-* 同私有包的安装命令一样，只不过包名需要替换，初始化软链会包含`workspace`前缀，`pnpm publish`后会自动修正为真实的URL版本
+* 同私有包的安装命令一样，只不过包名需要替换，初始化软链会包含`workspace`前缀，`pnpm publish`后会自动修正为真实的包URL版本
 
 ```bash
 pnpm add [scope-package-name] -r --filter [target-scope-package-name]
+```
+
+## 启动、构建
+
+```bash
+pnpm dev
+pnpm build
 ```
