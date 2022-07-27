@@ -43,7 +43,7 @@
       "prettier --write --cache --ignore-unknown"
     ],
     "*.{ts,vue}": [
-      "eslint --cache --fix"
+      "eslint --fix"
     ]
   },
   "packageManager": "pnpm@7.3.0"
