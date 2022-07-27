@@ -49,9 +49,10 @@ pnpm add [package] -r --filter [scope-package-name]
 pnpm add [scope-package-name] -r --filter [target-scope-package-name]
 ```
 
-## 启动、构建
+## 依赖安装、启动、构建
 
 ```bash
+pnpm i
 pnpm dev
 pnpm build
 ```
