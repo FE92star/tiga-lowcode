@@ -14,5 +14,4 @@ import { effect } from 'vue'
 effect(() => {
   console.log(add(1, 2))
 })
-
 </script>

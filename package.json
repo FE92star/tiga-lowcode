@@ -6,6 +6,7 @@
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "postinstall": "simple-git-hooks",
+    "format": "prettier --write --cache .",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "pnpm -r --parallel --filter=./packages/* run dev",
     "build": "pnpm -r --filter=./packages/* run build"
@@ -16,12 +17,20 @@
   "devDependencies": {
     "@types/jest": "^28.1.6",
     "@types/node": "^18.6.1",
+    "lint-staged": "^13.0.3",
     "picocolors": "^1.0.0",
+    "prettier": "^2.7.1",
     "simple-git-hooks": "^2.8.0",
     "typescript": "^4.7.4"
   },
   "simple-git-hooks": {
+    "pre-commit": "pnpm exec lint-staged --concurrent false",
     "commit-msg": "pnpm exec tsx scripts/verifyCommit.ts $1"
+  },
+  "lint-staged": {
+    "*": [
+      "prettier --write --cache --ignore-unknown"
+    ]
   },
   "packageManager": "pnpm@7.3.0"
 }
