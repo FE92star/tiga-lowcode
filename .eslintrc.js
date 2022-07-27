@@ -1,0 +1,68 @@
+// @ts-check
+const { defineConfig } = require('eslint-define-config')
+
+module.exports = defineConfig({
+  root: true,
+  extends: [
+    'eslint:recommended',
+    'plugin:vue/vue3-recommended',
+    'plugin:@typescript-eslint/recommended'
+  ],
+  plugins: ['import'],
+  /* 默认优先指定vue语法的解析器 */
+  parser: 'vue-eslint-parser',
+  /* 优先级低于parse的语法解析配置 */
+  parserOptions: {
+    sourceType: 'module',
+    parser: '@typescript-eslint/parser'
+  },
+  rules: {
+    eqeqeq: ['warn', 'always', { null: 'never' }],
+    'no-debugger': ['error'],
+    'no-empty': ['warn', { allowEmptyCatch: true }],
+    'no-process-exit': 'off',
+    'no-useless-escape': 'off',
+    'prefer-const': [
+      'warn',
+      {
+        destructuring: 'all'
+      }
+    ],
+
+    '@typescript-eslint/ban-ts-comment': 'off',
+    '@typescript-eslint/ban-types': 'off',
+    '@typescript-eslint/explicit-module-boundary-types': [
+      'error',
+      { allowArgumentsExplicitlyTypedAsAny: true }
+    ],
+    '@typescript-eslint/no-empty-function': [
+      'error',
+      { allow: ['arrowFunctions'] }
+    ],
+    '@typescript-eslint/no-empty-interface': 'off',
+    '@typescript-eslint/no-explicit-any': 'off',
+    '@typescript-eslint/no-extra-semi': 'off', // conflicts with prettier
+    '@typescript-eslint/no-inferrable-types': 'off',
+    '@typescript-eslint/no-non-null-assertion': 'off',
+    '@typescript-eslint/no-unused-vars': 'off',
+    '@typescript-eslint/no-var-requires': 'off',
+    '@typescript-eslint/consistent-type-imports': [
+      'error',
+      { prefer: 'type-imports' }
+    ],
+
+    'import/no-duplicates': 'error',
+    'import/order': 'error',
+    'sort-imports': [
+      'error',
+      {
+        ignoreCase: false,
+        ignoreDeclarationSort: true,
+        ignoreMemberSort: false,
+        memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single'],
+        allowSeparatedGroups: false
+      }
+    ]
+  },
+  reportUnusedDisableDirectives: true
+})
