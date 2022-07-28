@@ -1,16 +1,13 @@
 <script lang="ts" setup>
 import ToolGroup from './Tools.vue'
 import Snapshot from './Snapshot.vue'
+import Deliver from './Deliver.vue'
 </script>
 
 <template>
   <div class="editor-header">
     <div class="editor-header__left">
-      <a
-        href="/"
-        target="_blank"
-        class="editor-header-home"
-      >
+      <a href="/" target="_blank" class="editor-header-home">
         <img
           src="https://st0.dancf.com/static/02/202105211033-926a.png"
           alt="logo"
@@ -22,6 +19,10 @@ import Snapshot from './Snapshot.vue'
       <span class="editor-header__left-pipe" />
 
       <Snapshot />
+    </div>
+
+    <div class="editor-header__right">
+      <Deliver />
     </div>
   </div>
 </template>

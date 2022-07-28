@@ -2,12 +2,12 @@
   <section class="editor-header-tools">
     <div class="header-save">
       <div class="header-save__tools">
-        <div class="header-save__tool-btn">
+        <el-button link>
           文件
-        </div>
-        <div class="header-save__tool-btn">
+        </el-button>
+        <el-button link>
           视图
-        </div>
+        </el-button>
       </div>
     </div>
   </section>
@@ -25,17 +25,6 @@
 
   &__tools {
     display: flex;
-  }
-
-  &__tool-btn {
-    height: 40px;
-    line-height: 40px;
-    padding: 0 12px;
-    font-size: 14px;
-    font-weight: 600;
-    border-radius: 4px;
-    color: #444950;
-    cursor: pointer;
   }
 }
 </style>
