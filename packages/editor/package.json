@@ -20,6 +20,7 @@
   "dependencies": {
     "@tiga/shared": "workspace:^0.0.1",
     "element-plus": "^2.2.10",
-    "vue": "^3.2.37"
+    "vue": "^3.2.37",
+    "vue-router": "^4.1.3"
   }
 }
