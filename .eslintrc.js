@@ -74,7 +74,8 @@ module.exports = defineConfig({
 
     // vue
     'vue/no-v-html': 'off',
-    'vue/require-default-prop': 'off'
+    'vue/require-default-prop': 'off',
+    'vue/multi-word-component-names': 'off'
   },
   reportUnusedDisableDirectives: true
 })

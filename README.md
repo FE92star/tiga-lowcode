@@ -8,7 +8,7 @@
 
 ## 技术栈
 
-vue3+ts+vite
+vue3+vue-router+ts+vite
 
 ## 功能点实现 TODO
 
