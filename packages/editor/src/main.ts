@@ -1,13 +1,15 @@
 import { createApp } from 'vue'
-import ElementPlus from 'element-plus'
-import 'element-plus/dist/index.css'
 import './styles/index.less'
 import App from './App.vue'
+
+import { setupElementPlus } from './plugins/element-plus'
 
 import router from './router'
 
 const app = createApp(App)
-app.use(ElementPlus)
+
+// 手动注册element-plus组件
+setupElementPlus(app)
 
 app.use(router)
 // router ready

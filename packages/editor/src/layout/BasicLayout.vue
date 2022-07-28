@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import BasicLayoutHeader from './Header.vue'
+import BasicLayoutHeader from './Header/index.vue'
 import BasicLayoutAsider from './Sider.vue'
 </script>
 

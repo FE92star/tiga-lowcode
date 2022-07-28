@@ -75,7 +75,19 @@ module.exports = defineConfig({
     // vue
     'vue/no-v-html': 'off',
     'vue/require-default-prop': 'off',
-    'vue/multi-word-component-names': 'off'
+    'vue/multi-word-component-names': 'off',
+    'vue/max-attributes-per-line': [
+      // 元素属性换行规则
+      'warn',
+      {
+        singleline: {
+          max: 3
+        },
+        multiline: {
+          max: 1
+        }
+      }
+    ]
   },
   reportUnusedDisableDirectives: true
 })
