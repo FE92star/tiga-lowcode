@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import BasicLayout from '@/components/BasicLayout/index.vue'
+import BasicLayout from '@/layout/BasicLayout.vue'
 
 // import { add } from '@tiga/shared'
 // import { effect } from 'vue'

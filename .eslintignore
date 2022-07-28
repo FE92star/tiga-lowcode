@@ -1,2 +1,4 @@
 dist
 temp
+packages/editor/auto-imports.d.ts
+packages/editor/components.d.ts
