@@ -2,6 +2,13 @@
 
 > 迪迦低代码平台
 
+<p align="center">
+  <img src="https://img.shields.io/github/license/FE92star/tiga-lowcode" />
+  <a href="https://github.com/FE92star/tiga-lowcode"><img src="https://img.shields.io/github/stars/FE92star/tiga-lowcode" /></a>
+  <a href="https://github.com/FE92star/tiga-lowcode"><img src="https://img.shields.io/github/forks/FE92star/tiga-lowcode" /></a>
+  <a href="https://github.com/FE92star/tiga-lowcode/issues"><img src="https://img.shields.io/github/issues/FE92star/tiga-lowcode" /></a>
+</p>
+
 ## 实现参照标准
 
 布局可以直接参照[稿定设计](https://www.gaoding.com/odyssey/design)的 h5 页面制作平台
