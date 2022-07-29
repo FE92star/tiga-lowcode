@@ -21,72 +21,9 @@
   justify-content: flex-end;
 }
 
-.WH() {
-  width: 100%;
-  height: 100%;
-}
-
-.WH(@w, @h) {
-  width: unit(@w, px);
-  height: unit(@h, px);
-}
-
-.ATL(@top, @left) {
-  position: absolute;
-  top: unit(@top, px);
-  left: unit(@left, px);
-}
-
-.ABL(@bottom, @left) {
-  position: absolute;
-  bottom: unit(@bottom, px);
-  left: unit(@left, px);
-}
-
-.ATL() {
-  .ATL(0, 0);
-}
-
-.ATR(@top, @right) {
-  position: absolute;
-  top: unit(@top, px);
-  right: unit(@right, px);
-}
-
-.ABR(@bottom, @right) {
-  position: absolute;
-  right: unit(@right, px);
-  bottom: unit(@bottom, px);
-}
-
-.FTL() {
-  .FTL(0, 0);
-}
-
-.FTL(@top, @left) {
-  position: fixed;
-  top: unit(@top, px);
-  left: unit(@left, px);
-}
-
-.MHCenter(@top) {
-  .MHCenter();
-
-  top: unit(@top, px);
-}
-
-.MHCenter() {
-  position: absolute;
-  right: 0;
-  left: 0;
-  margin: auto;
-}
-
-.THCenter(@top) {
-  position: absolute;
-  top: unit(@top, px);
-  left: 50%;
-  transform: translate(-50%, 0);
+.fdc {
+  display: flex;
+  flex-direction: column;
 }
 
 .TCenter() {
