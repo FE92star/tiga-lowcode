@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import BasicLayoutHeader from './Header/index.vue'
-import BasicLayoutAsider from './Sider.vue'
+import BasicLayoutAsider from './Sider/index.vue'
 </script>
 
 <template>
@@ -42,6 +42,7 @@ import BasicLayoutAsider from './Sider.vue'
     position: relative;
     background-color: var(--bg-reg);
     z-index: 1;
+    flex: auto;
   }
 }
 </style>

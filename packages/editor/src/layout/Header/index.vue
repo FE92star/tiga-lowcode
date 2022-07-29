@@ -20,7 +20,6 @@ import Deliver from './Deliver.vue'
 
       <Snapshot />
     </div>
-
     <div class="editor-header__right">
       <Deliver />
     </div>
