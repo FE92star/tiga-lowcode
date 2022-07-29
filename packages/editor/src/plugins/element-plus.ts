@@ -4,10 +4,15 @@ import 'element-plus/dist/index.css'
 import {
   ArrowLeft,
   ArrowRight,
+  Avatar,
+  Basketball,
   ColdDrink,
   Collection,
+  ElementPlus,
   Food,
+  Mic,
   Notebook,
+  Picture,
   Plus
 } from '@element-plus/icons-vue'
 
@@ -18,7 +23,12 @@ const components = [
   Notebook,
   Food,
   ColdDrink,
-  Plus
+  Plus,
+  Picture,
+  ElementPlus,
+  Basketball,
+  Mic,
+  Avatar
 ]
 
 export function setupElementPlus(app: App): void {
