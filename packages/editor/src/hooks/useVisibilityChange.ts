@@ -5,6 +5,10 @@ interface VisibilityOptions {
   hide?: () => void
 }
 
+/**
+ * 监听页面的可见性
+ * references: https://www.w3.org/TR/page-visibility/
+ */
 export function useVisibilityChange(options: VisibilityOptions): () => void {
   if (IS_NODE) {
     throw Error('请在浏览器环境使用该API~')

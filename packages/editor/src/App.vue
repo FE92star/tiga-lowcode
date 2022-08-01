@@ -2,6 +2,7 @@
 import { onBeforeUnmount, onMounted } from 'vue'
 import { useVisibilityChange } from './hooks/useVisibilityChange'
 import BasicLayout from '@/layout/BasicLayout.vue'
+import RightMenu from '@/layout/RightMenu/index.vue'
 
 let visibleEffect: () => void
 
@@ -25,4 +26,6 @@ onBeforeUnmount(() => {
   <BasicLayout>
     <router-view />
   </BasicLayout>
+
+  <RightMenu />
 </template>
