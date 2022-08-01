@@ -2,13 +2,11 @@
  * 自定义right menu
  * @param {EventTarget} context-禁用右键的dom对象
  * @param {String} targetEle-右键目标对象
- * @param {String} customShowClass-自定义类名
  * reference: https://developer.mozilla.org/zh-CN/docs/Web/API/Element/contextmenu_event
  */
 export function useContextMenu(
   context: HTMLElement,
-  targetEle: string,
-  customShowClass = 'visible'
+  targetEle: string
 ): () => void {
   const scope = document.querySelector('body')
   const targetRightMenuContext = document.getElementById(targetEle)
@@ -67,13 +65,9 @@ export function useContextMenu(
     const { normalizedX, normalizedY } = normalizePosition(mouseX, mouseY)
 
     if (targetRightMenuContext) {
-      targetRightMenuContext.classList.remove(customShowClass)
       targetRightMenuContext.style.top = `${normalizedY}px`
       targetRightMenuContext.style.left = `${normalizedX}px`
-
-      setTimeout(() => {
-        targetRightMenuContext.classList.add(customShowClass)
-      }, 50)
+      targetRightMenuContext.style.visibility = 'visible'
     }
   }
 
@@ -81,8 +75,8 @@ export function useContextMenu(
 
   // 点击目标区域外面关闭right menu
   scope?.addEventListener('click', (e) => {
-    if (e.currentTarget !== targetRightMenuContext) {
-      targetRightMenuContext?.classList.remove(customShowClass)
+    if (e.currentTarget !== targetRightMenuContext && targetRightMenuContext) {
+      targetRightMenuContext.style.visibility = 'hidden'
     }
   })
 
