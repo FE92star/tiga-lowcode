@@ -1,6 +1,22 @@
 <script lang="ts" setup>
+import { onBeforeUnmount, onMounted } from 'vue'
+import { useContextMenu } from '../hooks/useContextMenu'
 import BasicLayoutHeader from './Header/index.vue'
 import BasicLayoutAsider from './Sider/index.vue'
+
+let contextMenuEffect: () => void
+
+onMounted(() => {
+  const editorIns = document.getElementById('editor-layout')
+
+  if (editorIns) {
+    contextMenuEffect = useContextMenu(editorIns, 'menu')
+  }
+})
+
+onBeforeUnmount(() => {
+  contextMenuEffect?.()
+})
 </script>
 
 <template>
@@ -11,7 +27,7 @@ import BasicLayoutAsider from './Sider/index.vue'
     <div class="editor-layout__aside">
       <BasicLayoutAsider />
     </div>
-    <section class="editor-layout__content">
+    <section id="editor-layout" class="editor-layout__content">
       <slot />
     </section>
   </div>
